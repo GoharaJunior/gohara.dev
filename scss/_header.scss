@@ -1,7 +1,52 @@
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    &:before {
+        content: "";
+        width: 83.8rem;
+        height: 19.5rem;
+        background: url(../img/header-before.svg) no-repeat;
+        position: absolute;
+        top: 0;
+        left: 22%;
+        pointer-events: none;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    &.fixed-menu {
+        background-color: #071126;
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+
     .container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        height: 5.625rem;
+
+        img {
+            width: 100%;
+            max-width: 9.375rem;
+        }
+
+        nav {
+            width: 100%;
+            max-width: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a {
+                color: #BAD2EF;
+                font-size: 1rem;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
     }
 }

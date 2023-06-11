@@ -6,7 +6,11 @@
     outline: none;
     border: none;
     box-sizing: border-box;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Exo', sans-serif;
+}
+
+a {
+    cursor: pointer;
 }
 
 img {
@@ -14,8 +18,8 @@ img {
     display: block;
 }
 
-html {
-    font-size: 62.5%;
+body {
+    background-color: #071126;
 }
 
 button {

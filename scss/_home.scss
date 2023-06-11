@@ -1,0 +1,55 @@
+.s-hero {
+    height: 56.25rem;
+    margin-top: 10rem;
+
+    .left-area {
+        width: 100%;
+        max-width: 632px;
+
+        &-title-top-wrapper {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.25rem;
+
+            span {
+                margin-right: 5px;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 1.125rem;
+                text-transform: uppercase;
+                display: block;
+                background: linear-gradient(37.87deg, #0194FF 20.9%, #01EADA 78.55%, #01EADA 78.55%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+        
+        h1 {
+            font-weight: 900;
+            font-size: 3.75rem;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #fff;
+            margin-bottom: 1.25rem;
+            background: linear-gradient(91.34deg,#F3FFFF 4.63%,#9AD0F4 62.78%,#9DE5F8 97.64%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        > p {
+            font-weight: 400;
+            font-size: 1.25rem;
+            line-height: 150%;
+            color: #bad2ef;
+            margin-bottom: 2.1875rem;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+    }
+}

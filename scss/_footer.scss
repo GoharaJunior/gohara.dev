@@ -1,10 +1,10 @@
 footer {
-    background: linear-gradient(270deg,#5200FF,#FA0BFF,#5200FF);
+    background: linear-gradient(45deg, #0A64A3, #71DDEF, #0A64A3, #71DDEF);
     background-size: 600% 600%;
     -webkit-animation: AnimationName 10s ease-in-out infinite;
     -moz-animation: AnimationName 10s ease-in-out infinite;
     animation: AnimationName 10s ease-in-out infinite;
-
+    
     .container {
         display: flex;
         align-items: center;

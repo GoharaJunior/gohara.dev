@@ -1,1 +1,1 @@
-"use strict";
+"use strict";var header=document.getElementById("js-header");function fixedMenu(){80<window.pageYOffset?header.classList.add("fixed-menu"):header.classList.remove("fixed-menu")}document.addEventListener("scroll",fixedMenu);
