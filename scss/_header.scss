@@ -3,6 +3,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 2023;
+
     &:before {
         content: "";
         width: 83.8rem;
@@ -46,6 +48,10 @@ header {
                 font-size: 1rem;
                 font-weight: 700;
                 text-transform: uppercase;
+                transition: color .3s ease;
+                &:hover {
+                    color: #fff;
+                }
             }
         }
     }
