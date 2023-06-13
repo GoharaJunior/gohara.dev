@@ -1,6 +1,10 @@
 .s-hero {
-    height: 56.25rem;
-    margin-top: 10rem;
+    height: 60rem;
+    padding-top: 10rem;
+    background-image: url(../img/background-teste-2.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: auto;
 
     .container {
         display: flex;
@@ -25,7 +29,7 @@
                     font-size: 1.125rem;
                     text-transform: uppercase;
                     display: block;
-                    background: linear-gradient(37.87deg, #D8E4EC 20.9%, #41E8DF 78.55%);
+                    background: linear-gradient(2deg, #D8E4EC 20.9%, #41E8DF 78.55%);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
@@ -60,7 +64,29 @@
 
         .right-area {
             position: relative;
-            right: -90px;
+
+            .circle-icon-text {
+                position: absolute;
+                top: 302px;
+                right: 190px;
+                animation: rotation 13s infinite linear
+            }
+
+            .circle-icon-mid {
+                position: absolute;
+                top: 321px;
+                right: 211px;
+            }
         }
+    }
+}
+
+@keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(359deg)
     }
 }
