@@ -1,5 +1,5 @@
 .s-hero {
-    height: 60rem;
+    height: 61rem;
     padding-top: 10rem;
     background-image: url(../img/background-teste-2.png);
     background-repeat: no-repeat;
@@ -79,6 +79,41 @@
             }
         }
     }
+}
+
+.bg {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 28px;
+    color: #fff;
+}
+
+#one,
+#two,
+#three,
+#four,
+#five {
+    height: 800px;
+}
+
+.bg#one {
+    background-color: #653df5;
+}
+.bg#two {
+    background-color: #026bce;
+}
+.bg#three {
+    background-color: #c20102;
+}
+.bg#four {
+    background-color: #f4c151;
+}
+.bg#five {
+    background-color: #46103f;
 }
 
 @keyframes rotation {
