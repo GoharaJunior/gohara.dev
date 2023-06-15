@@ -4,7 +4,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 2023;
-    padding-top: 30px;
+    padding-top: 29px;
     transition: all 0.3s ease;
 
     &:before {
@@ -23,7 +23,7 @@ header {
 
     &.fixed-menu {
         background-color: #071126;
-        padding-bottom: 30px;
+        padding-bottom: 29px;
         transition: all 0.3s ease;
         overflow: hidden;
     }

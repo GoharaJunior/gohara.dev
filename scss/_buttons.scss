@@ -3,6 +3,7 @@
  * ====================================== */
 
 .btn-primary {
+    position: relative;
     color: #fff;
     font-weight: 600;
     font-size: 1.125rem;
@@ -17,6 +18,29 @@
     background-size: 400% 200%;
     transition: background 1.6s cubic-bezier(0.55, 0.1, 0.47, 0.94) 0s;
     box-shadow: 0rem .1875rem 3.4375rem -1.25rem #10E5EB;
+    &:hover {
+        span {
+            transform: translateX(-14px);
+        }
+
+        img {
+            opacity: 1;
+        }
+    }
+
+    span {
+        display: block;
+        transition: transform .4s ease;
+    }
+
+    img {
+        position: absolute;
+        opacity: 0;
+        width: 20px;
+        top: 22px;
+        right: 15px;
+        transition: opacity .4s ease;
+    }
 
 }
 
