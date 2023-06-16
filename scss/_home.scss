@@ -14,6 +14,7 @@
         .left-area {
             width: 100%;
             max-width: 30.125rem;
+            margin-right: 1.875rem;
     
             &-title-top-wrapper {
                 display: flex;
@@ -21,7 +22,7 @@
                 margin-bottom: 1.25rem;
     
                 span {
-                    margin-right: 5px;
+                    margin-right: .3125rem;
                 }
     
                 p {
@@ -39,7 +40,7 @@
             
             h1 {
                 font-weight: 900;
-                font-size: 50px;
+                font-size: 3.125rem;
                 line-height: 120%;
                 letter-spacing: 0.02em;
                 color: #fff;
@@ -65,34 +66,60 @@
         .right-area {
             position: relative;
 
-            .ra-illustration {
-                min-width: 583px;
+            .circle-wrapper {
+                position: absolute;
+                width: 12.125rem;
+                height: 12.0625rem;
+                top: 73%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    display: none;
+                }
             }
 
             .circle-icon-text {
                 position: absolute;
-                top: 302px;
-                right: 190px;
+                width: auto;
+                height: auto;
                 animation: rotation 13s infinite linear
             }
 
             .circle-icon-mid {
                 position: absolute;
-                top: 321px;
-                right: 211px;
+                width: auto;
+                height: auto;
+                top: 10%;
             }
         }
     }
 
-    @include responsive(1125px) {
+    @media (max-width: 1025px) {
         padding-top: 5rem;
+        background-position: top center;
 
         .container {
             flex-direction: column;
-
+            
             .left-area {
                 max-width: 100%;
                 text-align: center;
+
+                h1 {
+                    font-size: 2.5rem;
+                    max-width: 41.25rem;
+                    margin: 0 auto 1.25rem;
+                }
+
+                > p {
+                    font-size: 1.125rem;
+                    max-width: 36.25rem;
+                    margin: 0 auto 1.25rem;
+                }
 
                 &-title-top-wrapper {
                     justify-content: center;
@@ -101,19 +128,65 @@
 
             .right-area {
                 order: -1;
-                
-                .ra-illustration {
-                    max-width: 483px;
+                max-width: 31.25rem;
+            }
+        }
+    }
+
+    @media (max-width: 500.1px) {
+        padding-top: 7rem;
+
+        .container {
+            .left-area {
+                margin-right: 0;
+
+                &-title-top-wrapper {
+                    span {
+                        display: none;
+                    }
+
+                    p {
+                        font-size: 15px;
+                    }
+                }
+
+                h1 {
+                    font-size: 36px;
+                }
+
+                > p {
+                    font-size: 15px;
+                    max-width: 22.25rem;
+                }
+            }
+
+            .right-area {
+                .circle-wrapper {
+                    span {
+                        font-size: 30px;
+                        display: block;
+                    }
+
+                    .circle-icon-text {
+                        max-width: 150px;
+                    }
+
+                    .circle-icon-mid {
+                        top: 19%;
+                        max-width: 120px;
+                    }
                 }
             }
         }
     }
 
-    @include responsive(500.1px) {
+    @media (max-width: 375.1px) {
         .container {
             .left-area {
-                h1 {
-                    font-size: 2.25rem;
+                &-title-top-wrapper {
+                    p {
+                        font-size: 14px;
+                    }
                 }
             }
         }
