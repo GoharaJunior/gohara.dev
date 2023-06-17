@@ -10,3 +10,8 @@ function fixedMenu() {
 }
 
 document.addEventListener('scroll', fixedMenu);
+
+// AOS Animation
+AOS.init({
+    duration: 1000
+});
