@@ -7,6 +7,75 @@
     background-size: auto;
     background-color: #05101d;
 
+    .lines {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        margin: auto;
+        width: 90vw;
+        .line {
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            top: 0;
+            left: 67%;
+            background: rgba(255,255,255,.1);
+            overflow: hidden;
+            &:first-child{
+                margin-left: -25%;
+                &:after {
+                    animation-delay: 1s;
+                }
+            }
+            &:nth-child(2) {
+                margin-left: -8%;
+                &:after {
+                    animation-delay: 2s;
+                }
+            }
+
+            &:nth-child(3) {
+                margin-left: 25%;
+                &:after {
+                    animation-delay: 1.5s;
+                }
+            }
+
+            &:nth-child(4) {
+                margin-left: 8%;
+                &:after {
+                    animation-delay: 2.5s;
+                }
+            }
+
+            &:before {
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                top: 0;
+                left: 50%;
+                background: rgba(255,255,255,.1);
+                overflow: hidden;
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                height: 25vh;
+                width: 100%;
+                top: -50%;
+                left: 0;
+                background: linear-gradient(to bottom,#4749b8 0,#4749b8 75%,transparent 100%);
+                animation: 3s infinite drop;
+                animation-fill-mode: forwards;
+                animation-timing-function: cubic-bezier(0.4,0.26,0,0.97);
+            }
+        }
+    }
+
     .container {
         display: flex;
         align-items: center;
@@ -132,6 +201,14 @@
 
         .container {
             flex-direction: column;
+
+            .lines {
+                .line {
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
             
             .left-area {
                 max-width: 100%;
@@ -182,6 +259,9 @@
         height: 870px;
 
         .container {
+            // .lines {
+            //     height: 86%;
+            // }
             .left-area {
                 margin-right: 0;
 
@@ -401,7 +481,7 @@
     }
 
     @media (max-width: 500.1px) {
-        height: 1090px;
+        height: 1000px;
 
         .container {
             .left-area {
@@ -433,10 +513,12 @@
         }
     }
 
-    @media (max-width: 389px) {
+    @media (max-width: 390.1px) {
+        height: 1060px;
+        padding-bottom: 0;
+
         .container {
             .left-area {
-                margin-top: 150px;
 
                 img {
                     &:nth-of-type(2) {
@@ -448,7 +530,7 @@
     }
 }
 
-.s-ruler {
+.s-brands {
     display: flex;
     align-items: center;
     width: 100%;
@@ -484,13 +566,104 @@
     }
 
     img {
-        max-width: 150px;
+        max-width: 90px;
+    }
+}
+
+.s-depoimentos {
+    padding-top: 100px;
+    .top {
+        @include flex(row, flex-end, space-between);
+
+        h2 {
+            font-weight: 900;
+            font-size: 50px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            margin-bottom: 20px;
+            color: #9DE5F8;
+
+            span {
+                display: block;
+                color: #bad2ef;
+                font-size: 40px;
+                margin-bottom: 1.4rem;
+            }
+        }
+
+        .swiper-pagination {
+            position: relative;
+            text-align: right;
+            flex: 1;
+
+            .swiper-pagination-bullet {
+                background: $brand-yellow;
+                opacity: 0.3;
+                border-radius: 12px;
+                transition: all .3s;
+                &-active {
+                    opacity: 1;
+                    width: 17.23px;
+                }
+            }
+        }
+    }
+    .slide-depoimentos {
+        overflow: hidden;
+    }
+
+    @include responsive(991px) {
+        .top {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 5.1rem;
+            h2 {
+                text-align: center;
+                margin-bottom: 5.1rem;
+            }
+            .swiper-pagination {
+                text-align: center;
+            }
+        }
+    }
+
+    @include responsive(480px) {
+        padding-top: 7.6rem;
+        .container {
+            padding: 0;
+        }
+        .top {
+            margin-bottom: 3.4rem;
+            h2 {
+                font-size: 2.8rem;
+                font-weight: 600;
+                max-width: 28.5rem;
+                margin-bottom: 3.4rem;
+                span {
+                    margin-bottom: 11px;
+                }
+            }
+        }
+        .slide-depoimentos {
+            padding: 0 20px;
+        }
     }
 }
 
 .s-space {
     height: 500px;
     background-color: gray;
+}
+
+// Lines animation
+@keyframes drop {
+    0% {
+        top: -50%
+    }
+
+    100% {
+        top: 110%
+    }
 }
 
 // Icon s-hero rotation

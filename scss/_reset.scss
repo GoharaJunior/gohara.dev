@@ -20,6 +20,28 @@ img {
 
 body {
     background-color: #05101d;
+    
+    /* Largura da barra */
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar {
+        padding-right: 4px;
+        width: 20px;
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent; /* color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: #293140;
+        border: 6px solid #05101d;
+        transition: all 3s ease !important;
+    }
 }
 
 button {

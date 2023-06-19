@@ -16,9 +16,9 @@ AOS.init({
     duration: 1000
 });
 
-
-const swiper = new Swiper('.swiper', {
-    slidesPerView: 2,
+// Swiper Brands
+var swiper = new Swiper('.slide-brands.swiper', {
+    slidesPerView: 3,
     speed: 8000,
     allowTouchMove: false,
     loop: true,
@@ -28,15 +28,47 @@ const swiper = new Swiper('.swiper', {
     // Configurações iniciais para dispositivos móveis
     breakpoints: {
         // Quando a largura da tela for igual ou maior que 640px
-        640: {
+        600: {
             slidesPerView: 3,
             spaceBetween: 30
         },
         // Quando a largura da tela for igual ou maior que 768px
         768: {
-            slidesPerView: '10',
+            slidesPerView: 5,
+            spaceBetween: 40
+        },
+        992: {
+            slidesPerView: 7,
+            spaceBetween: 40
+        },
+        1248: {
+            slidesPerView: 10,
             spaceBetween: 40
         }
         // E assim por diante para tamanhos de tela maiores
+    }
+});
+
+// Swiper depoimentos
+var swiper = new Swiper(".slide-depoimentos", {
+    slidesPerView: 3,
+    spaceBetween: 32,
+    pagination: {
+        el: ".s-depoimentos .top .swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1.3,
+            spaceBetween: 16,
+        },
+        600: {
+            slidesPerView: 2.3,
+            spaceBetween: 15,
+        },
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 32,
+        }
     }
 });
