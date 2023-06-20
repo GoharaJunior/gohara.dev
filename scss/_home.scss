@@ -571,7 +571,13 @@
 }
 
 .s-depoimentos {
-    padding-top: 100px;
+    padding: 100px 0;
+
+    &-titles {
+        display: flex;
+        flex-direction: column;
+    }
+
     .top {
         @include flex(row, flex-end, space-between);
 
@@ -581,14 +587,17 @@
             line-height: 120%;
             letter-spacing: 0.02em;
             margin-bottom: 20px;
-            color: #9DE5F8;
+            background: linear-gradient(91.34deg,#F3FFFF 4.63%,#9AD0F4 62.78%,#9DE5F8 97.64%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
 
-            span {
-                display: block;
-                color: #bad2ef;
-                font-size: 40px;
-                margin-bottom: 1.4rem;
-            }
+        span {
+            color: #bad2ef;
+            font-size: 40px;
+            margin-bottom: 1.4rem;
         }
 
         .swiper-pagination {
@@ -597,7 +606,8 @@
             flex: 1;
 
             .swiper-pagination-bullet {
-                background: $brand-yellow;
+                background: rgb(1,155,252);
+                background: linear-gradient(90deg, rgba(1,155,252,1) 0%, rgba(1,219,224,1) 100%);
                 opacity: 0.3;
                 border-radius: 12px;
                 transition: all .3s;
@@ -608,6 +618,7 @@
             }
         }
     }
+
     .slide-depoimentos {
         overflow: hidden;
     }
