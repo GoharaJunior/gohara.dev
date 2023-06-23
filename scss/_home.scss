@@ -481,7 +481,7 @@
     }
 
     @media (max-width: 500.1px) {
-        height: 1000px;
+        height: 1060px;
 
         .container {
             .left-area {
@@ -571,7 +571,7 @@
 }
 
 .s-depoimentos {
-    padding: 100px 0;
+    padding: 30px 0;
 
     &-titles {
         display: flex;
@@ -623,41 +623,67 @@
         overflow: hidden;
     }
 
-    @include responsive(991px) {
+    @media (max-width: 1070px) {
+        &-titles {
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+        }
+
         .top {
             flex-direction: column;
-            align-items: center;
-            margin-bottom: 5.1rem;
-            h2 {
-                text-align: center;
-                margin-bottom: 5.1rem;
-            }
+            
             .swiper-pagination {
+                top: 0;
                 text-align: center;
             }
         }
     }
 
-    @include responsive(480px) {
-        padding-top: 7.6rem;
-        .container {
-            padding: 0;
-        }
+    @include responsive(991px) {
         .top {
-            margin-bottom: 3.4rem;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+            
+            span {
+                font-size: 28px;
+            }
+
             h2 {
-                font-size: 2.8rem;
-                font-weight: 600;
-                max-width: 28.5rem;
-                margin-bottom: 3.4rem;
-                span {
-                    margin-bottom: 11px;
-                }
+                font-size: 38px;
             }
         }
-        .slide-depoimentos {
-            padding: 0 20px;
+    }
+
+    @media (max-width: 500.1px) {
+
+        .container {
+            padding: 0;
+
+            .top {
+                padding: 0 15px;
+
+                span {
+                    margin-bottom: 10px;
+                }
+
+                h2 {
+                    font-size: 34px;
+                }
+
+                .s-depoimentos-titles {
+                    span {
+                        font-size: 22px;
+                    }
+                }
+            }
+
+            .slide-depoimentos {
+                padding: 0 20px;
+            }
         }
+
     }
 }
 
