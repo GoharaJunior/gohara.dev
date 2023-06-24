@@ -785,41 +785,41 @@
     }
 }
 
-.s-space {
-    height: 500px;
+// .s-space {
+//     height: 500px;
 
-    &:before {
-        content: '';
-        position: absolute;
-        left: inherit;
-        // right: calc(50% - 300px);
-        width: 600px;
-        height: 600px;
-        background: #0a64a3;
-        border-radius: 100%;
-        filter: blur(150px);
-        mix-blend-mode: screen;
-        animation: light 5s infinite;
-        pointer-events: none;
-        opacity: 0;
-    }
+//     &:before {
+//         content: '';
+//         position: absolute;
+//         left: inherit;
+//         // right: calc(50% - 300px);
+//         width: 600px;
+//         height: 600px;
+//         background: #0a64a3;
+//         border-radius: 100%;
+//         filter: blur(150px);
+//         mix-blend-mode: screen;
+//         animation: light 5s infinite;
+//         pointer-events: none;
+//         opacity: 0;
+//     }
 
-    &:after {
-        content: '';
-        position: absolute;
-        left: inherit;
-        // right: calc(50% - 900px);
-        width: 500px;
-        height: 500px;
-        background: #71ddef;
-        border-radius: 100%;
-        filter: blur(200px);
-        mix-blend-mode: plus-lighter;
-        animation: light 5s 2s infinite;
-        pointer-events: none;
-        opacity: 0;
-    }
-}
+//     &:after {
+//         content: '';
+//         position: absolute;
+//         left: inherit;
+//         // right: calc(50% - 900px);
+//         width: 500px;
+//         height: 500px;
+//         background: #71ddef;
+//         border-radius: 100%;
+//         filter: blur(200px);
+//         mix-blend-mode: plus-lighter;
+//         animation: light 5s 2s infinite;
+//         pointer-events: none;
+//         opacity: 0;
+//     }
+// }
 
 // Noise Effect
 .noise {
