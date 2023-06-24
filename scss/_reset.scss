@@ -52,6 +52,11 @@ body {
     }
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 button {
     background-color: transparent;
     cursor: pointer;
