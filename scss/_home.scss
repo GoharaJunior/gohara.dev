@@ -570,6 +570,104 @@
     }
 }
 
+.s-services {
+    .container {
+        padding: 100px 15px;
+    }
+    
+    &-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+
+        h2 {
+            color: #fff;
+            font-size: 2.5em;
+            font-weight: 600;
+            margin: 0 30px;
+            text-align: center;
+        }
+
+        &:before {
+            display: block;
+            content: "";
+            border-bottom: 0;
+            flex-grow: 1;
+            border-top: 1px solid;
+            border-image: linear-gradient(to left, #0096af, transparent) 1;
+
+        }
+
+        &:after {
+            display: block;
+            content: "";
+            border-bottom: 0;
+            flex-grow: 1;
+            border-top: 1px solid;
+            border-image: linear-gradient(to right, #0096af, transparent) 1;
+        }
+    }
+
+    &-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+        gap: 20px;
+    }
+
+    &-box {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        // max-width: 410px;
+        height: 240px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, rgb(1 55 92) 0%, rgb(0 150 175) 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2em 2em 2em 2em;
+        
+        h3 {
+            font-size: 1.5em;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 10px;
+            background: linear-gradient(91.34deg,#F3FFFF 4.63%,#9AD0F4 62.78%,#9DE5F8 97.64%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        p {
+            color: #FFFFFF;
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+    }
+
+    @media (max-width: 670px) {
+        .container {
+            padding: 50px 15px;
+        }
+
+        &-title {
+            margin-bottom: 30px;
+            
+            h2 {
+                font-size: 32px;
+            }
+        }
+        &-box {
+            max-width: 100%;
+        }
+    }
+}
+
 .s-depoimentos {
     padding: 30px 0;
 
@@ -604,6 +702,7 @@
             position: relative;
             text-align: right;
             flex: 1;
+            margin-bottom: 20px;
 
             .swiper-pagination-bullet {
                 background: rgb(1,155,252);
@@ -688,7 +787,63 @@
 
 .s-space {
     height: 500px;
-    background-color: gray;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: inherit;
+        // right: calc(50% - 300px);
+        width: 600px;
+        height: 600px;
+        background: #0a64a3;
+        border-radius: 100%;
+        filter: blur(150px);
+        mix-blend-mode: screen;
+        animation: light 5s infinite;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: inherit;
+        // right: calc(50% - 900px);
+        width: 500px;
+        height: 500px;
+        background: #71ddef;
+        border-radius: 100%;
+        filter: blur(200px);
+        mix-blend-mode: plus-lighter;
+        animation: light 5s 2s infinite;
+        pointer-events: none;
+        opacity: 0;
+    }
+}
+
+// Noise Effect
+.noise {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.15;
+    background-image: url('../img/ruido-animado.gif');
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 2024;
+}
+
+// Light animation
+@keyframes light {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
 }
 
 // Lines animation
