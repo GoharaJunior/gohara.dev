@@ -73,3 +73,10 @@ var swiper = new Swiper(".slide-depoimentos", {
         }
     }
 });
+
+// Atualizar automaticamente o ano atual
+const currentYear = new Date().getFullYear();
+
+jQuery('.s-footer .container').append(`
+    <p>© Copyright ${currentYear} - Todos os direitos reservados</p>
+`)
