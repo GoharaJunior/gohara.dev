@@ -856,9 +856,22 @@
     }
 }
 
-// .s-space {
-//     height: 500px;
-// }
+.s-cases {
+    height: 500px;
+    padding: 100px 15px;
+
+    h2 {
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        background: linear-gradient(91.34deg,#F3FFFF 4.63%,#9AD0F4 62.78%,#9DE5F8 97.64%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+}
 
 // Noise Effect
 .noise {
