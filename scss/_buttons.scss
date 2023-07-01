@@ -26,6 +26,10 @@
         img {
             opacity: 1;
         }
+
+        svg {
+            opacity: 1;
+        }
     }
 
     span {
@@ -42,6 +46,15 @@
         transition: opacity .4s ease;
     }
 
+    svg {
+        position: absolute;
+        opacity: 0;
+        width: 1.25rem;
+        top: 1.375rem;
+        right: .9375rem;
+        transition: opacity .4s ease;
+    }
+
     @media (max-width: 768.1px) {
         padding: 1.1875rem 1.875rem;
         span {
@@ -49,6 +62,81 @@
         }
 
         img {
+            opacity: 1;
+        }
+
+        svg {
+            opacity: 1;
+        }
+    }
+
+}
+
+.btn-cases {
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 160%;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 10px 28px;
+    border-radius: .625rem;
+    border: .125rem solid #4CB2D3;
+    animation: 3.4s cubic-bezier(0.2, 0.5, 0.9, 0.6) 2s infinite normal none running textura;
+    background-image: linear-gradient(45deg, #0A64A3, #71DDEF, #0A64A3, #71DDEF);
+    background-size: 400% 200%;
+    transition: background 1.6s cubic-bezier(0.55, 0.1, 0.47, 0.94) 0s;
+    box-shadow: 0rem .1875rem 3.4375rem -1.25rem #10E5EB;
+    &:hover {
+        span {
+            transform: translateX(-0.7rem);
+        }
+
+        img {
+            opacity: 1;
+        }
+
+        svg {
+            opacity: 1;
+        }
+    }
+
+    span {
+        display: block;
+        transition: transform .4s ease;
+    }
+
+    img {
+        position: absolute;
+        opacity: 0;
+        width: 1.25rem;
+        top: 1.375rem;
+        right: .9375rem;
+        transition: opacity .4s ease;
+    }
+
+    svg {
+        position: absolute;
+        opacity: 0;
+        width: 20px;
+        top: 5px;
+        right: 14px;
+        transition: opacity .4s ease;
+        fill: #fff;
+    }
+
+    @media (max-width: 768.1px) {
+        padding: 1.1875rem 1.875rem;
+        span {
+            transform: translateX(-0.875rem);
+        }
+
+        img {
+            opacity: 1;
+        }
+
+        svg {
             opacity: 1;
         }
     }

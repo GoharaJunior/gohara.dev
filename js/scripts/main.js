@@ -74,6 +74,7 @@ var swiper = new Swiper(".slide-depoimentos", {
     }
 });
 
+
 // Atualizar automaticamente o ano atual
 const currentYear = new Date().getFullYear();
 
