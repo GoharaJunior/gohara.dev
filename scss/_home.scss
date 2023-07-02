@@ -860,11 +860,26 @@
     height: auto;
     padding: 100px 15px;
 
-    &-title {
-        display: flex;
-        align-items: center;
+    &-titles {
         margin-bottom: 50px;
 
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #bad2ef;
+            margin-bottom: 20px;
+            text-align: center; 
+            width: 100%;
+            max-width: 770px;
+            margin: 0 auto;
+        }
+    }
+
+    &-title-wrapper {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
 
         &:before {
             display: block;
@@ -900,7 +915,6 @@
         }
     }
 
-
     &-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -911,6 +925,7 @@
         position: relative;
         cursor: pointer;
         width: 100%;
+        max-width: 100%;
         overflow: hidden;
 
         .overlay {
@@ -953,6 +968,7 @@
         }
 
         img {
+            width: 100%;
             border-radius: 5px;
             transition: blur 0.2s ease-in-out;
         }
@@ -970,6 +986,54 @@
                 filter: blur(1px);
                 transition: blur 0.2s ease-in-out;
             }
+        }
+    }
+
+    @media (max-width: 768.1px) {
+        &-wrapper {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &-box {
+            &:hover {
+                img {
+                    filter: blur(0px);
+                }
+            }
+
+            .overlay {
+                opacity: 1;
+                visibility: visible;
+                height: 45%;
+                bottom: 0;
+                border-radius: 0;
+                padding: 10px;
+                background: linear-gradient(249.88deg, #2A2933 -7.83%, rgba(42, 41, 51, 0.795) 61.31%);
+
+                h3 {
+                    font-size: 24px;
+                }
+
+                > span {
+                    margin-bottom: 0px;
+                }
+
+                p {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500.1px) {
+        &-titles {
+            p {
+                font-size: 18px;
+            }
+        }
+
+        &-wrapper {
+            grid-template-columns: 1fr;
         }
     }
 }

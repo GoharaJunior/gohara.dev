@@ -77,7 +77,6 @@
     color: #fff;
     font-weight: 600;
     font-size: 14px;
-    line-height: 160%;
     display: inline-block;
     text-transform: uppercase;
     padding: 10px 28px;
@@ -120,14 +119,15 @@
         position: absolute;
         opacity: 0;
         width: 20px;
-        top: 5px;
+        top: 4px;
         right: 15px;
         transition: opacity .4s ease;
         fill: #fff;
     }
 
     @media (max-width: 768.1px) {
-        padding: 1.1875rem 1.875rem;
+        padding: 15px 30px;
+
         span {
             transform: translateX(-0.875rem);
         }
@@ -138,6 +138,7 @@
 
         svg {
             opacity: 1;
+            top: 8px;
         }
     }
 
