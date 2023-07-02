@@ -4,7 +4,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 2023;
-    padding-top: 29px;
+    padding-top: 25px;
     transition: all 0.3s ease;
 
     &:before {
@@ -41,7 +41,7 @@ header {
 
         nav {
             width: 100%;
-            max-width: 10rem;
+            max-width: 550px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -113,7 +113,7 @@ header {
     
             #btn-mobile {
                 display: flex;
-                padding: 0.5rem 1rem;
+                padding: 8px 16px 8px 0;
                 font-size: 1rem;
                 border: none;
                 background: none;
