@@ -699,7 +699,7 @@
     }
 }
 
-.s-depoimentos {
+.s-reviews {
     padding: 30px 0;
 
     .container {
@@ -785,7 +785,7 @@
         }
     }
 
-    .slide-depoimentos {
+    .slide-reviews {
         overflow: hidden;
     }
 
@@ -842,14 +842,14 @@
                     font-size: 34px;
                 }
 
-                .s-depoimentos-titles {
+                .s-reviews-titles {
                     span {
                         font-size: 22px;
                     }
                 }
             }
 
-            .slide-depoimentos {
+            .slide-reviews {
                 padding: 0 20px;
             }
         }
@@ -1034,6 +1034,76 @@
 
         &-wrapper {
             grid-template-columns: 1fr;
+        }
+    }
+}
+
+.s-budget {
+    padding-bottom: 100px;
+
+    .container {
+        text-align: center;
+    }
+
+    h2 {
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        max-width: 530px;
+        text-align: center;
+        margin: 0 auto 26px;
+        background: linear-gradient(91.34deg,#F3FFFF 4.63%,#9AD0F4 62.78%,#9DE5F8 97.64%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    p {
+        position: relative;
+        font-size: 15px;
+        line-height: 29px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+        max-width: 660px;
+        margin: 0 auto 52px;
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: -33px;
+            background: url(../img/points-left.svg) no-repeat center center;
+            width: 9px;
+            height: 9px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: -2px;
+            right: -33px;
+            background: url(../img/points-right.svg) no-repeat center center;
+            width: 9px;
+            height: 9px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 38px;
+            max-width: 520px;
+        }
+
+        p {
+            &:after {
+                right: 0;
+            }
+
+            &:before {
+                left: 0;
+            }
         }
     }
 }

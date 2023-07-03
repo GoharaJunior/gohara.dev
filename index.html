@@ -38,26 +38,40 @@
 
     <header id="js-header">
         <div class="container">
-            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-                <span id="hamburger"></span>
-            </button>
-
             <a href="#">
                 <img src="./img/gohara-pixel-logo.png" alt="Gohara Logo">
             </a>
-
-            <button class="btn-cash">
-                <svg width="15" height="15" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 1V23M12 5H4.5C3.57174 5 2.6815 5.36875 2.02513 6.02513C1.36875 6.6815 1 7.57174 1 8.5C1 9.42826 1.36875 10.3185 2.02513 10.9749C2.6815 11.6313 3.57174 12 4.5 12H9.5C10.4283 12 11.3185 12.3687 11.9749 13.0251C12.6313 13.6815 13 14.5717 13 15.5C13 16.4283 12.6313 17.3185 11.9749 17.9749C11.3185 18.6313 10.4283 19 9.5 19H1" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
             
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#sobre">Quem sou</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#depoimentos">Depoimentos</a>
-                <a href="#cases">Cases</a>
+            <nav id="nav">
+                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                    <span id="hamburger"></span>
+                </button>
+                <ul id="menu" role="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Quem sou</a></li>
+                    <li><a href="#reviews">Depoimentos</a></li>
+                    <li><a href="#cases">Cases</a></li>
+                    <li><a href="#budget">Orçamento</a></li>
+                </ul>
+
+                <div class="menu-mobile">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Quem sou</a></li>
+                        <li><a href="#reviews">Depoimentos</a></li>
+                        <li><a href="#cases">Cases</a></li>
+                        <li><a href="#budget">Orçamento</a></li>
+                        <li>
+                            <a href="#" class="btn-primary">
+                                <span>Solicite seu orçamento!</span>
+                                <svg width="33" height="20" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32.4493 11.2713L22.6311 0.362183C22.4216 0.130909 22.1293 0 21.8195 0H15.274C15.0633 0.000228357 14.8571 0.0612905 14.6802 0.175852C14.5033 0.290414 14.3633 0.453604 14.2769 0.64582C14.1024 1.04073 14.1744 1.50109 14.4624 1.81964L23.6238 12L14.4624 22.1782C14.1744 22.499 14.1002 22.9593 14.2769 23.3521C14.4536 23.747 14.8442 24.0001 15.274 24.0001H21.8195C22.1293 24.0001 22.4216 23.867 22.6311 23.6401L32.4493 12.7309C32.8224 12.3164 32.8224 11.6837 32.4493 11.2713Z"/>
+                                    <path d="M18.2675 11.2713L8.44925 0.362183C8.23979 0.130909 7.94743 0 7.63761 0H1.09214C0.881404 0.000228357 0.675217 0.0612905 0.498343 0.175852C0.321468 0.290414 0.181429 0.453604 0.0950452 0.64582C-0.0795007 1.04073 -0.00750052 1.50109 0.2805 1.81964L9.44198 12L0.2805 22.1782C-0.00750052 22.499 -0.0816825 22.9593 0.0950452 23.3521C0.271773 23.747 0.662319 24.0001 1.09214 24.0001H7.63761C7.94743 24.0001 8.23979 23.867 8.44925 23.6401L18.2675 12.7309C18.6405 12.3164 18.6405 11.6837 18.2675 11.2713Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -113,7 +127,7 @@
         </div>
     </section>
 
-    <section class="s-about" id="sobre">
+    <section class="s-about" id="about">
         <div class="container">
             <div class="left-area" data-aos="fade-right">
                 <img src="./img/check-icon.svg" alt="Icone de check">
@@ -170,7 +184,7 @@
         </div>
     </section>
 
-    <section class="s-services" id="servicos">
+    <section class="s-services" id="services">
         <div class="container">
 
             <div class="s-services-title" data-aos="fade-left">
@@ -196,64 +210,64 @@
         </div>
     </section>
 
-    <section class="s-depoimentos" id="depoimentos">
+    <section class="s-reviews" id="reviews">
         <div class="container">
             <div class="top" data-aos="fade-right">
-                <div class="s-depoimentos-titles">
+                <div class="s-reviews-titles">
                     <span>Depoimentos e recomendações 😊</span>
                     <h2>De quem já confiou em meu trabalho!</h2>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
 
-            <div class="slide-depoimentos" data-aos="fade-up">
+            <div class="slide-reviews" data-aos="fade-up">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="card-depoimento">
+                        <div class="card-reviews">
                             <p>
-                                <img src="./img/depoimentos-img.png" alt="">
+                                <img src="./img/reviews-img-01.png" alt="">
                             </p>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card-depoimento">
+                        <div class="card-reviews">
                             <p>
-                                <img src="./img/depoimentos-img.png" alt="">
+                                <img src="./img/reviews-img-01.png" alt="">
                             </p>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card-depoimento">
+                        <div class="card-reviews">
                             <p>
-                                <img src="./img/depoimentos-img.png" alt="">
+                                <img src="./img/reviews-img-01.png" alt="">
                             </p>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card-depoimento">
+                        <div class="card-reviews">
                             <p>
-                                <img src="./img/depoimentos-img.png" alt="">
+                                <img src="./img/reviews-img-01.png" alt="">
                             </p>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card-depoimento">
+                        <div class="card-reviews">
                             <p>
-                                <img src="./img/depoimentos-img.png" alt="">
+                                <img src="./img/reviews-img-01.png" alt="">
                             </p>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card-depoimento">
+                        <div class="card-reviews">
                             <p>
-                                <img src="./img/depoimentos-img.png" alt="">
+                                <img src="./img/reviews-img-01.png" alt="">
                             </p>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card-depoimento">
+                        <div class="card-reviews">
                             <p>
-                                <img src="./img/depoimentos-img.png" alt="">
+                                <img src="./img/reviews-img-01.png" alt="">
                             </p>
                         </div>
                     </div>
@@ -264,14 +278,14 @@
 
     <section class="s-cases" id="cases">
         <div class="container">
-            <div class="s-cases-titles">
+            <div class="s-cases-titles" data-aos="fade-right">
                 <div class="s-cases-title-wrapper">
                     <h2>Cases</h2>
                 </div>
                 <p>Aumente suas chances de sucesso: Nossas landing pages são projetadas para maximizar as oportunidades de negócio. Com um design atraente e uma mensagem clara, você estará um passo à frente na conquista de novos clientes e expandindo sua base de consumidores.</p>
             </div>
 
-            <div class="s-cases-wrapper">
+            <div class="s-cases-wrapper" data-aos="fade-up">
                 <div class="s-cases-box">
                     <div class="overlay">
                         <h3>LP Stone</h3>
@@ -374,6 +388,17 @@
                     <img src="./img/king-host-thumb.png" alt="Thumbnail">
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="s-budget" id="budget">
+        <div class="container">
+            <h2>Pronto para começarmos um projeto juntos?</h2>
+            <p>Estou ansioso para começar a trabalhar no seu projeto. Garanto que a implementação da programação será fiel ao design proposto pelo designer, dentro dos prazos estabelecidos e de acordo com suas necessidades. Vamos em frente! Por favor, compartilhe mais detalhes sobre o seu projeto para que eu possa ajudá-lo da melhor forma possível.</p>
+            <a href="#" class="btn-primary" data-aos="fade-up" data-aos-duration="2000">
+                <span>Solicite seu orçamento!</span>
+                <img src="./img/arrow.svg" alt="Arrow button" title="Arrow button">
+            </a>
         </div>
     </section>
 
