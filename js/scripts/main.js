@@ -75,7 +75,6 @@ function fixedMenu() {
 
 document.addEventListener('scroll', fixedMenu);
 
-
 // AOS Animation
 AOS.init({
     duration: 1000
@@ -159,6 +158,7 @@ closeMenuByClickingLinks.forEach(function(item) {
 
     item.addEventListener("click", function() {
         nav.classList.remove('active');
+        document.documentElement.classList.toggle('menu-opened');
     });
 });
 
@@ -168,17 +168,19 @@ function toggleMenu(event) {
     const nav = document.getElementById('nav');
     nav.classList.toggle('active');
 
+
     const active = nav.classList.contains('active')
     event.currentTarget.setAttribute('aria-expanded', active);
 
-    document.documentElement.classList.toggle('menu-opened');
-
     if (active) {
         event.currentTarget.setAttribute('aria-label', 'Fechar Menu')
+        document.documentElement.classList.add('menu-opened');
     } else {
         event.currentTarget.setAttribute('aria-label', 'Abrir Menu')
+        document.documentElement.classList.remove('menu-opened');
     }
 }
 
 btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('click', lockBg);
 btnMobile.addEventListener('touchstart', toggleMenu);
