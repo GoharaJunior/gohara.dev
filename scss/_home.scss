@@ -625,7 +625,6 @@
         position: relative;
         overflow: hidden;
         width: 100%;
-        // max-width: 410px;
         height: 240px;
         border-radius: 10px;
         background: linear-gradient(90deg, rgb(1 55 92) 0%, rgb(0 150 175) 100%);
@@ -635,6 +634,21 @@
         justify-content: center;
         text-align: center;
         padding: 2em 2em 2em 2em;
+        &:hover {
+            &:before {
+                opacity: 1;
+            }
+        }
+
+        &:before {
+            background: radial-gradient(800px circle at var(--mouse-x) var (--mouse-y), #352d7790, transparent);
+            mix-blend-mode: screen;
+            z-index: 3;
+        }
+
+        &:before {
+            background: radial-gradient(400px circle at var(--mouse-x) var (--mouse-y), #f48fb190, transparent);
+        }
         
         h3 {
             font-size: 1.5em;

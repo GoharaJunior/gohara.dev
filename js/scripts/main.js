@@ -180,7 +180,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     btnMobile.addEventListener('click', toggleMenu);
-    btnMobile.addEventListener('click', lockBg);
-btnMobile.addEventListener('touchstart', toggleMenu);
-
+    btnMobile.addEventListener('touchstart', toggleMenu);
 });
