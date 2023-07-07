@@ -760,7 +760,7 @@
 
     .top {
         @include flex(row, flex-end, space-between);
-        margin-bottom: 30px;
+        margin-bottom: 50px;
 
         h2 {
             font-weight: 900;
@@ -1066,7 +1066,7 @@
         letter-spacing: 0.02em;
         max-width: 530px;
         text-align: center;
-        margin: 0 auto 26px;
+        margin: 0 auto 30px;
         background: linear-gradient(91.34deg,#F3FFFF 4.63%,#9AD0F4 62.78%,#9DE5F8 97.64%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
