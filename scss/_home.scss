@@ -1122,6 +1122,182 @@
     }
 }
 
+.s-faq {
+    padding: 100px 0;
+
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .text-area {
+            display: flex;
+            flex-direction: column;
+
+            h6 {
+                font-weight: 600;
+                font-size: 25px;
+                letter-spacing: 0.02em;
+                background: linear-gradient(91.34deg,#F3FFFF 4.63%,#9AD0F4 62.78%,#9DE5F8 97.64%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+
+            h2 {
+                font-weight: 900;
+                font-size: 40px;
+                line-height: 120%;
+                letter-spacing: 0.02em;
+                max-width: 530px;
+                text-align: left;
+                margin: 0 auto 30px;
+                background: linear-gradient(91.34deg,#F3FFFF 4.63%,#9AD0F4 62.78%,#9DE5F8 97.64%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+
+        .accordion {
+            &-button {
+                display: block;
+                width: 100%;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                text-align: left;
+                background-color: transparent;
+                position: relative;
+                padding: 24px 36px 24px 40px;
+                border-bottom: 2px solid #12192B;
+                transition: 0.7s ease;
+                color: #E4EAF2;
+                font-family: "Oxanium", sans-serif;
+                font-size: 18px;
+                line-height: 150%;
+                font-weight: 500;
+                &:hover {
+                    padding-left: 48px;
+
+                }
+
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    transform: translate(0, -50%);
+                    transition: 1s ease;
+                    background-image: url("../img/icon-check.svg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+                
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 40%;
+                    right: 24px;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 2px;
+                    transition: 0.5s ease;
+                    background-image: url("../img/icon-more.svg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    transform: rotate(90deg);
+                }
+            }
+
+            &-button-active {
+                position: relative;
+
+                &:before {
+                    transform: rotate(315deg);
+                }
+            }
+
+            &-area {
+                width: 100%;
+                max-width: 56%;
+                padding-left: 20px;
+            }
+
+            &-content {
+                overflow: hidden;
+                max-height: 0;
+                transition: max-height 0.5s ease;
+
+                p {
+                    color: #fff;
+                    padding: 15px 0;
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 200;
+                }
+            }
+
+            &-content:target {
+                overflow: auto;
+                max-height: 300px;
+            }
+        }
+    }
+
+    @media (max-width: 1020px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+
+            .text-area {
+                width: 100%;
+                max-width: 100%;
+
+                h2 {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+
+            .accordion {
+                &-area {
+                    padding-left: 0;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500.1px) {
+        padding: 0 0 100px;
+
+        .container {
+            .text-area {
+                h2 {
+                    font-size: 30px;
+                }
+            }
+
+            .accordion {
+                &-button {
+                    font-size: 16px;
+
+                    &:before {
+                        right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // Noise Effect
 .noise {
     display: block;
@@ -1193,3 +1369,5 @@
         transform: translateY(0)
     }
 }
+
+

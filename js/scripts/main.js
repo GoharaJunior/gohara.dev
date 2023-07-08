@@ -221,4 +221,28 @@ document.addEventListener("DOMContentLoaded", function() {
             return false;
         }
     }
+
+    /*==================== ACCORDION ====================*/ 
+    let openedButton = null;
+
+    document.querySelectorAll('.accordion-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const accordionContent = button.nextElementSibling;
+        
+            if (openedButton && openedButton !== button) {
+                openedButton.classList.remove('accordion-button-active');
+                openedButton.nextElementSibling.style.maxHeight = 0;
+            }
+        
+            button.classList.toggle('accordion-button-active');
+        
+            if (button.classList.contains('accordion-button-active')) {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+            } else {
+                accordionContent.style.maxHeight = 0;
+            }
+        
+            openedButton = button;
+        });
+    });
 });
