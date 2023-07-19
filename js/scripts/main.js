@@ -289,21 +289,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     /*=== modal ===*/
-    const btnModal = $('.js-open-modal');
-    const btnCloseModal = $('.js-close-modal');
-    const modal = $('#js-modal');
-    const overlay = $('.overlay');
-
-    setTimeout(() => { 
-        modal.addClass('active');
-    }, 1000);
-
-    $('.close-modal').click(function() {
-        $(modal).removeClass('active');
-    })
-
-    $(overlay).click(function() {
-        $(modal).removeClass('active');
-    })
-    /*=== End modal ===*/
+    
 });
