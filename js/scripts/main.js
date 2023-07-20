@@ -289,8 +289,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     /*=== modal ===*/
-    const btnModal = document.querySelector('.js-open-modal');
     const btnCloseModal = document.querySelector('.js-close-modal');
+    const clickOverlaytoClose = document.getElementById('js-close-overlay');
     const modal = document.getElementById('js-modal');
 
     function openModal() {
@@ -299,14 +299,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function closeModal() {
         modal.classList.remove('active');
+        clickOverlaytoClose.remove('active');
     }
 
-    btnModal.addEventListener('click', openModal);
     btnCloseModal.addEventListener('click', closeModal);
+    clickOverlaytoClose.addEventListener('click', closeModal);
 
-
-
-    // Função para verificar se o usuário deu scroll suficiente
+    /*===  Função para verificar se o usuário deu scroll suficiente ===*/
     function checkScroll() {
         // Altura da janela do navegador
         var windowHeight = window.innerHeight;
@@ -339,8 +338,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Adicione o event listener para o evento de scroll
     window.addEventListener("scroll", checkScroll);
 
-
-    // Função para rolar para o topo
+    /*===  Função para rolar para o topo ===*/
     function scrollToTop() {
         window.scrollTo({
             top: 0,
