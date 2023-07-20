@@ -28,6 +28,7 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://gohara.netlify.app/" />
+    
     <meta property="twitter:title" content="Gohara Junior - Desenvolvedor Front-End" />
     <meta property="twitter:description" content="Entre em contato comigo hoje mesmo para discutir suas necessidades e como posso contribuir para o sucesso do seu projeto." />
     <meta property="twitter:image" content="https://gohara.netlify.app/img/share-og.png" />
@@ -35,6 +36,16 @@
 
 <body>
     <div class="noise"></div>
+
+    <div class="modal" id="js-modal">
+        <div class="overlay"></div>
+        <div class="box">
+            <button class="close-modal js-close-modal">
+                <img src="./img/close-icon.svg" alt="Ícone de fechar">
+            </button>
+            <h2>Conteúdo do modal</h2>
+        </div>
+    </div>
 
     <header id="js-header">
         <div class="container">
@@ -99,7 +110,7 @@
                 <div class="btn-area" data-aos="fade-up" data-aos-duration="2000">
                     <img class="details-left" src="./img/elements-details-left.svg" alt="Detalhes botão" title="Detalhes botão">
                     <img class="details-right" src="./img/elements-details-right.svg" alt="Detalhes botão" title="Detalhes botão">
-                    <a href="#" class="btn-primary">
+                    <a href="#" class="btn-primary js-open-modal">
                         <span>Solicite seu orçamento!</span>
                         <img src="./img/arrow.svg" alt="Arrow button" title="Arrow button">
                     </a>
@@ -135,13 +146,6 @@
         </div>
     </section>
 
-    <div class="modal">
-        <div class="overlay"></div>
-        <div class="box">
-            <button class="close js-close-modal">Fechar</button>
-            <h2>Conteúdo do modal</h2>
-        </div>
-    </div>
 
     <!-- 
     <div class="s-countdown">

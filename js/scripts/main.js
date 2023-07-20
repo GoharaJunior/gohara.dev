@@ -256,38 +256,98 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // Countdown
-    const daysEl = document.getElementById('days')
-    const hoursEl = document.getElementById('hours')
-    const minsEl = document.getElementById('mins')
-    const secondsEl = document.getElementById('seconds')
+    // const daysEl = document.getElementById('days')
+    // const hoursEl = document.getElementById('hours')
+    // const minsEl = document.getElementById('mins')
+    // const secondsEl = document.getElementById('seconds')
 
-    const newYears = "1 Jan 2024";
+    // const newYears = "1 Jan 2024";
 
-    function countdown() {
-        const newYearsDate = new Date(newYears);
-        const currentDate = new Date();
+    // function countdown() {
+    //     const newYearsDate = new Date(newYears);
+    //     const currentDate = new Date();
         
-        const totalSeconds = (newYearsDate - currentDate) / 1000;
+    //     const totalSeconds = (newYearsDate - currentDate) / 1000;
 
-        const days = Math.floor(totalSeconds / 3600 / 24);
-        const hours = Math.floor(totalSeconds / 3600) % 24;
-        const mins = Math.floor(totalSeconds / 60) % 60;
-        const seconds = Math.floor(totalSeconds) % 60;
+    //     const days = Math.floor(totalSeconds / 3600 / 24);
+    //     const hours = Math.floor(totalSeconds / 3600) % 24;
+    //     const mins = Math.floor(totalSeconds / 60) % 60;
+    //     const seconds = Math.floor(totalSeconds) % 60;
 
-        daysEl.innerHTML = days;
-        hoursEl.innerHTML = formatTime(hours);
-        minsEl.innerHTML = formatTime(mins);
-        secondsEl.innerHTML = formatTime(seconds);
-    }
+    //     daysEl.innerHTML = days;
+    //     hoursEl.innerHTML = formatTime(hours);
+    //     minsEl.innerHTML = formatTime(mins);
+    //     secondsEl.innerHTML = formatTime(seconds);
+    // }
 
-    function formatTime(time) {
-        return time < 10 ? `0${time}` : time;
-    }
+    // function formatTime(time) {
+    //     return time < 10 ? `0${time}` : time;
+    // }
 
-    countdown();
-    setInterval(countdown, 1000);
+    // countdown();
+    // setInterval(countdown, 1000);
 
 
     /*=== modal ===*/
+    const btnModal = document.querySelector('.js-open-modal');
+    const btnCloseModal = document.querySelector('.js-close-modal');
+    const modal = document.getElementById('js-modal');
+
+    function openModal() {
+        modal.classList.add('active');
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+    }
+
+    btnModal.addEventListener('click', openModal);
+    btnCloseModal.addEventListener('click', closeModal);
+
+
+
+    // Função para verificar se o usuário deu scroll suficiente
+    function checkScroll() {
+        // Altura da janela do navegador
+        var windowHeight = window.innerHeight;
+        // Quantidade de rolagem vertical já feita pelo usuário
+        var scrollY = window.scrollY || window.pageYOffset;
     
+        // Altura total do documento
+        var docHeight = Math.max(
+            document.body.scrollHeight,
+            document.documentElement.scrollHeight,
+            document.body.offsetHeight,
+            document.documentElement.offsetHeight,
+            document.body.clientHeight,
+            document.documentElement.clientHeight
+        );
+    
+        // Defina uma porcentagem (por exemplo, 80%) para determinar quando o modal deve aparecer
+        var scrollTrigger = 0.1;
+    
+        // Verifique se o usuário rolou o suficiente para mostrar o modal
+        if ((scrollY + windowHeight) >= (docHeight * scrollTrigger)) {
+            // Exibe o modal
+            openModal()
+    
+            // Opcionalmente, você pode remover o event listener após mostrar o modal para evitar que ele apareça novamente
+            window.removeEventListener("scroll", checkScroll);
+        }
+    }
+
+    // Adicione o event listener para o evento de scroll
+    window.addEventListener("scroll", checkScroll);
+
+
+    // Função para rolar para o topo
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Use 'auto' para uma rolagem imediata sem animação.
+        });
+    }
+
+    // Chame a função scrollToTop() quando a página for carregada
+    window.onload = scrollToTop;
 });

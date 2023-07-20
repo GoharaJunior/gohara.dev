@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: center;
     transition: all .3s;
-    z-index: 102;
+    z-index: 2023;
     opacity: 0;
     pointer-events: none;
 
@@ -56,7 +56,7 @@
         left: 0;
         height: 110%;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.70);
+        background-color: rgba(0,0,0,.3);
         z-index: 101;
     }
 
@@ -69,13 +69,27 @@
         width: 100%;
         max-width: 755px;
         height: 625px;
-        background-color: #fff;
+        background-color: #631CFB;
         transform: translateY(0);
         transition: transform .3s;
         
 
         .close-modal {
             position: absolute;
+            width: 38px;
+            height: 38px;
+            background: #fff;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            position: absolute;
+            right: 35.2px;
+            top: -19px;
+            cursor: pointer;
+            transition: transform .3s ease, -webkit-transform .3s ease;
+            &:hover {
+                transform: scale(1.1);
+            }
         }
 
     }
