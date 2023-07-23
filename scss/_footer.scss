@@ -9,7 +9,8 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 100px;
+        padding-top: 2rem;
+        padding-bottom: 5rem;
 
         .msg {
             display: flex;
@@ -40,7 +41,6 @@ footer {
         .container {
             height: initial;
             flex-direction: column;
-            padding: 30px 20px;
 
             .msg {
                 flex-direction: column;

@@ -164,6 +164,7 @@
 
                 span {
                     font-size: 70px;
+                    display: none;
                 }
             }
 
@@ -601,8 +602,8 @@
         }
 
         &-wrapper {
-            transition-timing-function: linear!important;
-            transform: translate3d(2001.25px, 0px, 0px);
+            transition-timing-function: linear !important;
+            // transform: translate3d(2001.25px, 0px, 0px) !important;
         }
     }
 

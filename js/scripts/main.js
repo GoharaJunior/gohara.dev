@@ -4,6 +4,65 @@ document.addEventListener("DOMContentLoaded", function() {
         duration: 1000
     });
 
+    /*=== Swiper Brands ===*/
+    var swiper = new Swiper('.slide-brands.swiper', {
+        loop: true,
+        slidesPerView: 3,
+        speed: 8000,
+        loopedSlidesLimit: false,
+        allowTouchMove: false,
+        autoplay: {
+            delay: 1,
+        },
+        // Configurações iniciais para dispositivos móveis
+        breakpoints: {
+            // Quando a largura da tela for igual ou maior que 640px
+            600: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            // Quando a largura da tela for igual ou maior que 768px
+            768: {
+                slidesPerView: 5,
+                spaceBetween: 40
+            },
+            992: {
+                slidesPerView: 7,
+                spaceBetween: 40
+            },
+            1248: {
+                slidesPerView: 10,
+                spaceBetween: 40
+            }
+            // E assim por diante para tamanhos de tela maiores
+        }
+    });
+
+    /*=== Swiper depoimentos ===*/
+    var swiper = new Swiper(".slide-reviews", {
+        slidesPerView: 3.5,
+        spaceBetween: 32,
+        grabCursor: true,
+        pagination: {
+            el: ".s-reviews .top .swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1.5,
+                spaceBetween: 16,
+            },
+            600: {
+                slidesPerView: 2.5,
+                spaceBetween: 15,
+            },
+            1200: {
+                slidesPerView: 3.5,
+                spaceBetween: 32,
+            }
+        }
+    });
+
     /*=== Link ancora ===*/
     const menuItems = document.querySelectorAll('header nav a[href^="#"]');
 
@@ -79,66 +138,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     document.addEventListener('scroll', fixedMenu);
-
-    /*=== Swiper Brands ===*/
-    var swiper = new Swiper('.slide-brands.swiper', {
-        slidesPerView: 3,
-        speed: 8000,
-        allowTouchMove: false,
-        loop: true,
-        autoplay: {
-            delay: 1,
-        },
-        // Configurações iniciais para dispositivos móveis
-        breakpoints: {
-            // Quando a largura da tela for igual ou maior que 640px
-            600: {
-                slidesPerView: 3,
-                spaceBetween: 30
-            },
-            // Quando a largura da tela for igual ou maior que 768px
-            768: {
-                slidesPerView: 5,
-                spaceBetween: 40
-            },
-            992: {
-                slidesPerView: 7,
-                spaceBetween: 40
-            },
-            1248: {
-                slidesPerView: 10,
-                spaceBetween: 40
-            }
-            // E assim por diante para tamanhos de tela maiores
-        }
-    });
-
-
-    /*=== Swiper depoimentos ===*/
-    var swiper = new Swiper(".slide-reviews", {
-        slidesPerView: 3.5,
-        spaceBetween: 32,
-        grabCursor: true,
-        pagination: {
-            el: ".s-reviews .top .swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1.5,
-                spaceBetween: 16,
-            },
-            600: {
-                slidesPerView: 2.5,
-                spaceBetween: 15,
-            },
-            1200: {
-                slidesPerView: 3.5,
-                spaceBetween: 32,
-            }
-        }
-    });
-
 
     /*=== Atualizar automaticamente o ano atual ===*/
     const currentYear = new Date().getFullYear();
@@ -245,17 +244,6 @@ document.addEventListener("DOMContentLoaded", function() {
             openedButton = button;
         });
     });
-
-    /*===  Função para rolar para o topo ===*/
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Use 'auto' para uma rolagem imediata sem animação.
-        });
-    }
-
-    window.onload = scrollToTop;
-
 
     /*=== Fake Count ===*/
     function random(min, max) {

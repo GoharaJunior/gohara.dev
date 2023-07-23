@@ -14,7 +14,6 @@
     background-color: #07112691;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-radius: 5px;
     border-top: 1px solid;
     border-image: linear-gradient(90deg,#F2298200, #9AD0F4,#F2298200) 1;
     display: flex;
@@ -28,5 +27,177 @@
     p {
         font-size: 16px;
         color: #fff;
+    }
+}
+
+// Popup de interesse
+#popup {
+    position: fixed;
+    z-index: 100;
+    bottom: -100%;
+    left: 50%;
+    width: 100%;
+    max-width: max-content;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, rgb(1, 55, 92) 0%, rgb(0, 150, 175) 100%);
+    background-size: 400% 200%;
+    transition: background 1.5s cubic-bezier(0.5, 0.1, 0.4, 0.9);
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    -o-border-image: linear-gradient(90deg, rgba(242, 41, 130, 0), #9AD0F4, rgba(242, 41, 130, 0)) 1;
+    border-image: linear-gradient(90deg, rgba(242, 41, 130, 0), #9AD0F4, rgba(242, 41, 130, 0)) 1;
+
+    opacity: 1;
+    animation-delay: 10s;
+    animation-direction: normal;
+    animation-duration: 120s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-name: popup2;
+
+    div {
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 7px;
+        }
+        p {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            display: block;
+        }
+    }
+}
+
+@keyframes popup2 {
+    0% {
+        bottom: -100%
+    }
+
+    5% {
+        bottom: 4%;
+        opacity: 1
+    }
+
+    7% {
+        bottom: 4%;
+        opacity: 1
+    }
+
+    9% {
+        bottom: -100%
+    }
+
+    10% {
+        bottom: -100%
+    }
+
+    18% {
+        bottom: -100%
+    }
+
+    20% {
+        bottom: -100%
+    }
+
+    22% {
+        bottom: -100%
+    }
+
+    32% {
+        bottom: -100%
+    }
+
+    34% {
+        bottom: 4%;
+        opacity: 1
+    }
+
+    36% {
+        bottom: 4%;
+        opacity: 1
+    }
+
+    38% {
+        bottom: -100%
+    }
+
+    43% {
+        bottom: -100%
+    }
+
+    45% {
+        bottom: -100%
+    }
+
+    47% {
+        bottom: -100%
+    }
+
+    57% {
+        bottom: -100%
+    }
+
+    59% {
+        bottom: -100%
+    }
+
+    61% {
+        bottom: -100%
+    }
+
+    63% {
+        bottom: -100%
+    }
+
+    68% {
+        bottom: -100%
+    }
+
+    70% {
+        bottom: 4%;
+        opacity: 1
+    }
+
+    72% {
+        bottom: 4%;
+        opacity: 1
+    }
+
+    74% {
+        bottom: -100%
+    }
+
+    84% {
+        bottom: -100%
+    }
+
+    86% {
+        bottom: -100%
+    }
+
+    90% {
+        bottom: -100%
+    }
+
+    94% {
+        bottom: -100%
+    }
+
+    96% {
+        bottom: -100%
+    }
+
+    88% {
+        bottom: -100%
+    }
+
+    100% {
+        bottom: -100%
     }
 }
