@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // AOS Animation
+    /*=== AOS Animation ===*/
     AOS.init({
         duration: 1000
     });
 
-    // Link ancora
+    /*=== Link ancora ===*/
     const menuItems = document.querySelectorAll('header nav a[href^="#"]');
 
     menuItems.forEach(item => {
@@ -39,35 +39,35 @@ document.addEventListener("DOMContentLoaded", function() {
      * @param {int} duration: animation duration in ms
      */
 
-    function smoothScrollTo(endX, endY, duration) {
-        const startX = window.scrollX || window.pageXOffset;
-        const startY = window.scrollY || window.pageYOffset;
-        const distanceX = endX - startX;
-        const distanceY = endY - startY;
-        const startTime = new Date().getTime();
+    // function smoothScrollTo(endX, endY, duration) {
+    //     const startX = window.scrollX || window.pageXOffset;
+    //     const startY = window.scrollY || window.pageYOffset;
+    //     const distanceX = endX - startX;
+    //     const distanceY = endY - startY;
+    //     const startTime = new Date().getTime();
 
-        duration = typeof duration !== 'undefined' ? duration : 400;
+    //     duration = typeof duration !== 'undefined' ? duration : 400;
 
-        // Easing function
-        const easeInOutQuart = (time, from, distance, duration) => {
-            if ((time /= duration / 2) < 1) return distance / 2 * time * time * time * time + from;
-            return -distance / 2 * ((time -= 2) * time * time * time - 2) + from;
-        };
+    //     // Easing function
+    //     const easeInOutQuart = (time, from, distance, duration) => {
+    //         if ((time /= duration / 2) < 1) return distance / 2 * time * time * time * time + from;
+    //         return -distance / 2 * ((time -= 2) * time * time * time - 2) + from;
+    //     };
 
-        const timer = setInterval(() => {
-            const time = new Date().getTime() - startTime;
-            const newX = easeInOutQuart(time, startX, distanceX, duration);
-            const newY = easeInOutQuart(time, startY, distanceY, duration);
+    //     const timer = setInterval(() => {
+    //         const time = new Date().getTime() - startTime;
+    //         const newX = easeInOutQuart(time, startX, distanceX, duration);
+    //         const newY = easeInOutQuart(time, startY, distanceY, duration);
 
-            if (time >= duration) {
-                clearInterval(timer);
-            }
+    //         if (time >= duration) {
+    //             clearInterval(timer);
+    //         }
 
-            window.scroll(newX, newY);
-        }, 1000 / 60); // 60 fps
-    };
+    //         window.scroll(newX, newY);
+    //     }, 1000 / 60); // 60 fps
+    // };
 
-    // Menu Fixo
+    /*=== Menu Fixo ===*/
     const header = document.getElementById('js-header');
 
     function fixedMenu() {
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.addEventListener('scroll', fixedMenu);
 
-    // Swiper Brands
+    /*=== Swiper Brands ===*/
     var swiper = new Swiper('.slide-brands.swiper', {
         slidesPerView: 3,
         speed: 8000,
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
-    // Swiper depoimentos
+    /*=== Swiper depoimentos ===*/
     var swiper = new Swiper(".slide-reviews", {
         slidesPerView: 3.5,
         spaceBetween: 32,
@@ -140,14 +140,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
-    // Atualizar automaticamente o ano atual
+    /*=== Atualizar automaticamente o ano atual ===*/
     const currentYear = new Date().getFullYear();
 
     jQuery('.s-footer .container').append(`
         <p>© Copyright ${currentYear} - Todos os direitos reservados</p>
     `)
 
-    // Menu hamburger mobile
+    /*=== Menu hamburger mobile ===*/
     const btnMobile = document.getElementById('btn-mobile');
     const closeMenuByClickingLinks = document.querySelectorAll('.menu-mobile ul li');
 
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function() {
     btnMobile.addEventListener('click', toggleMenu);
     btnMobile.addEventListener('touchstart', toggleMenu);
 
-    // Bloquear o botão direito do mouse
+    /*=== Bloquear o botão direito do mouse ===*/
     if (document.addEventListener) {
         document.addEventListener("contextmenu", function(e) {
             e.preventDefault();
@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Bloquear Ctrl+U e Ctrl+S
+    /*=== Bloquear Ctrl+U e Ctrl+S ===*/
     if (document.addEventListener) {
         document.addEventListener("keydown", bloquearSource);
     } else { //Versões antigas do IE
@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    /*==================== ACCORDION ====================*/ 
+    /*=== ACCORDION ===*/
     let openedButton = null;
 
     document.querySelectorAll('.accordion-button').forEach(button => {
@@ -246,98 +246,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-
-    // Clarity
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "hxlbyrur51");
-
-
-    // Countdown
-    // const daysEl = document.getElementById('days')
-    // const hoursEl = document.getElementById('hours')
-    // const minsEl = document.getElementById('mins')
-    // const secondsEl = document.getElementById('seconds')
-
-    // const newYears = "1 Jan 2024";
-
-    // function countdown() {
-    //     const newYearsDate = new Date(newYears);
-    //     const currentDate = new Date();
-        
-    //     const totalSeconds = (newYearsDate - currentDate) / 1000;
-
-    //     const days = Math.floor(totalSeconds / 3600 / 24);
-    //     const hours = Math.floor(totalSeconds / 3600) % 24;
-    //     const mins = Math.floor(totalSeconds / 60) % 60;
-    //     const seconds = Math.floor(totalSeconds) % 60;
-
-    //     daysEl.innerHTML = days;
-    //     hoursEl.innerHTML = formatTime(hours);
-    //     minsEl.innerHTML = formatTime(mins);
-    //     secondsEl.innerHTML = formatTime(seconds);
-    // }
-
-    // function formatTime(time) {
-    //     return time < 10 ? `0${time}` : time;
-    // }
-
-    // countdown();
-    // setInterval(countdown, 1000);
-
-
-    /*=== modal ===*/
-    const btnCloseModal = document.querySelector('.js-close-modal');
-    const clickOverlaytoClose = document.getElementById('js-close-overlay');
-    const modal = document.getElementById('js-modal');
-
-    function openModal() {
-        modal.classList.add('active');
-    }
-
-    function closeModal() {
-        modal.classList.remove('active');
-        clickOverlaytoClose.remove('active');
-    }
-
-    btnCloseModal.addEventListener('click', closeModal);
-    clickOverlaytoClose.addEventListener('click', closeModal);
-
-    /*===  Função para verificar se o usuário deu scroll suficiente ===*/
-    function checkScroll() {
-        // Altura da janela do navegador
-        var windowHeight = window.innerHeight;
-        // Quantidade de rolagem vertical já feita pelo usuário
-        var scrollY = window.scrollY || window.pageYOffset;
-    
-        // Altura total do documento
-        var docHeight = Math.max(
-            document.body.scrollHeight,
-            document.documentElement.scrollHeight,
-            document.body.offsetHeight,
-            document.documentElement.offsetHeight,
-            document.body.clientHeight,
-            document.documentElement.clientHeight
-        );
-    
-        // Defina uma porcentagem (por exemplo, 80%) para determinar quando o modal deve aparecer
-        var scrollTrigger = 0.1;
-    
-        // Verifique se o usuário rolou o suficiente para mostrar o modal
-        if ((scrollY + windowHeight) >= (docHeight * scrollTrigger)) {
-            // Exibe o modal
-            openModal()
-    
-            // Opcionalmente, você pode remover o event listener após mostrar o modal para evitar que ele apareça novamente
-            window.removeEventListener("scroll", checkScroll);
-        }
-    }
-
-    // Adicione o event listener para o evento de scroll
-    window.addEventListener("scroll", checkScroll);
-
     /*===  Função para rolar para o topo ===*/
     function scrollToTop() {
         window.scrollTo({
@@ -346,6 +254,31 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Chame a função scrollToTop() quando a página for carregada
     window.onload = scrollToTop;
+
+
+    /*=== Fake Count ===*/
+    function random(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    
+    function countViewer(min, max, elementID) {
+        var initial = random(min, max);
+        var count = initial;
+    
+        setInterval(function () {
+            var variation = random(-2, 2);
+    
+            count += variation;
+            if (count < min) {
+            count = min;
+            } else if (count > max) {
+            count = max;
+            }
+    
+            $(elementID).text(count);
+        }, 3000);
+    }
+    
+    countViewer(10,30, '#count-viewer')
 });

@@ -196,4 +196,17 @@ header {
             left: -50%;
         }
     }
+
+    .count-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+
+        svg {
+            fill: #fff;
+            width: 20px;
+            margin-right: 5px;
+        }
+    }
 }

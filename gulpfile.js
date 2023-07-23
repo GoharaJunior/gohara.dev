@@ -41,7 +41,7 @@ function gulpJs() {
 
 function pluginsJs() {
     return gulp
-    .src(['./js/lib/swiper.min.js', './js/lib/jquery-3.6.0.slim.min.js', './js/lib/unpkg.com_aos@2.3.1_dist_aos.js'])
+    .src(['./js/lib/swiper-10.0.4.min.js', './js/lib/jquery-3.6.0.slim.min.js', './js/lib/aos-2.3.4.js'])
     .pipe(concat('plugins.js'))
     .pipe(gulp.dest('js/'))
     .pipe(browserSync.stream())
