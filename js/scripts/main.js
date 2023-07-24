@@ -269,4 +269,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     countViewer(10,30, '#count-viewer')
+
+
+    /*=== Adiciona classe para esconder menu no desktop ===*/
+    if (window.innerWidth > 768) {
+        jQuery('.menu-mobile').addClass('isDesktop')
+
+        return
+    }
 });

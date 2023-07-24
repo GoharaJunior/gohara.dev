@@ -580,6 +580,7 @@
     height: 100px;
     background-color: #102338;
     background-color: #05101d;
+    margin-bottom: 50px;
 
     .container {
         display: flex;
@@ -614,7 +615,8 @@
 
 .s-services {
     .container {
-        padding-top: 100px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
     
     &-title {
@@ -756,7 +758,8 @@
 }
 
 .s-reviews {
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     .container {
         position: relative;
@@ -900,7 +903,7 @@
 
                 .s-reviews-titles {
                     span {
-                        font-size: 22px;
+                        font-size: 20px;
                     }
                 }
             }
@@ -914,7 +917,8 @@
 
 .s-cases {
     height: auto;
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     &-titles {
         margin-bottom: 50px;
@@ -1095,7 +1099,7 @@
 }
 
 .s-budget {
-    padding-top: 100px;
+    padding-top: 50px;
 
     .container {
         position: relative;
@@ -1213,6 +1217,12 @@
                 transform: translateY(-50%);
             }
 
+        }
+    }
+
+    @media (max-width: 500.1px) {
+        .details-float-right {
+            display: none;
         }
     }
 }

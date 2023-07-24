@@ -104,6 +104,9 @@ header {
                 pointer-events: none;
                 transition: all .4s;
                 z-index: 34;
+                &.isDesktop {
+                    display: none;
+                }
 
                 ul {
                     display: flex;
