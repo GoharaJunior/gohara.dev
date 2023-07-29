@@ -87,44 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
             top: to,
             behavior: "smooth"
         });
-
-        // smoothScrollTo(0, to)
     }
-
-    /**
-     * Smooth scroll animation - (Funciona em todos os navegadores)
-     * @param {int} endX: destination x coordinate
-     * @param {int} endY: destination y coordinate
-     * @param {int} duration: animation duration in ms
-     */
-
-    // function smoothScrollTo(endX, endY, duration) {
-    //     const startX = window.scrollX || window.pageXOffset;
-    //     const startY = window.scrollY || window.pageYOffset;
-    //     const distanceX = endX - startX;
-    //     const distanceY = endY - startY;
-    //     const startTime = new Date().getTime();
-
-    //     duration = typeof duration !== 'undefined' ? duration : 400;
-
-    //     // Easing function
-    //     const easeInOutQuart = (time, from, distance, duration) => {
-    //         if ((time /= duration / 2) < 1) return distance / 2 * time * time * time * time + from;
-    //         return -distance / 2 * ((time -= 2) * time * time * time - 2) + from;
-    //     };
-
-    //     const timer = setInterval(() => {
-    //         const time = new Date().getTime() - startTime;
-    //         const newX = easeInOutQuart(time, startX, distanceX, duration);
-    //         const newY = easeInOutQuart(time, startY, distanceY, duration);
-
-    //         if (time >= duration) {
-    //             clearInterval(timer);
-    //         }
-
-    //         window.scroll(newX, newY);
-    //     }, 1000 / 60); // 60 fps
-    // };
 
     /*=== Menu Fixo ===*/
     const header = document.getElementById('js-header');
@@ -147,39 +110,20 @@ document.addEventListener("DOMContentLoaded", function() {
     `)
 
     /*=== Menu hamburger mobile ===*/
-    const btnMobile = document.getElementById('btn-mobile');
+    const btnMobile = document.getElementById('js-btn-mobile');
     const closeMenuByClickingLinks = document.querySelectorAll('.menu-mobile ul li');
 
-    closeMenuByClickingLinks.forEach(function(item) {
-        const nav = document.getElementById('nav')
+    btnMobile.addEventListener('click', () => {
+        btnMobile.classList.toggle('is-active');
+        document.documentElement.classList.toggle('menu-opened')
+    })
 
+    closeMenuByClickingLinks.forEach(function(item) {
         item.addEventListener("click", function() {
-            nav.classList.remove('active');
+            btnMobile.classList.toggle('is-active');
             document.documentElement.classList.toggle('menu-opened');
         });
     });
-
-    function toggleMenu(event) {
-        if (event.type === 'touchstart') event.preventDefault();
-
-        const nav = document.getElementById('nav');
-        nav.classList.toggle('active');
-
-
-        const active = nav.classList.contains('active')
-        event.currentTarget.setAttribute('aria-expanded', active);
-
-        if (active) {
-            event.currentTarget.setAttribute('aria-label', 'Fechar Menu')
-            document.documentElement.classList.add('menu-opened');
-        } else {
-            event.currentTarget.setAttribute('aria-label', 'Abrir Menu')
-            document.documentElement.classList.remove('menu-opened');
-        }
-    }
-
-    btnMobile.addEventListener('click', toggleMenu);
-    btnMobile.addEventListener('touchstart', toggleMenu);
 
     /*=== Bloquear o botão direito do mouse ===*/
     if (document.addEventListener) {
@@ -269,12 +213,4 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     countViewer(10,30, '#count-viewer')
-
-
-    /*=== Adiciona classe para esconder menu no desktop ===*/
-    if (window.innerWidth > 768) {
-        jQuery('.menu-mobile').addClass('isDesktop')
-
-        return
-    }
 });
