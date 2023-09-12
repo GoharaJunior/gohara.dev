@@ -70,6 +70,19 @@
             }
         },
 
+        scrollToTopSmoothly: function() {
+            const logo = document.getElementById("logo");
+    
+            logo.addEventListener("click", (event) => {
+            event.preventDefault();
+    
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+            });
+        },
+
         reviewsSlides: function() {
             const swiper = new Swiper(".slide-reviews", {
                 slidesPerView: 3.5,
@@ -197,6 +210,7 @@
             theme.updateYear();
             theme.menuFixed();
             theme.LinkMenuAncora();
+            theme.scrollToTopSmoothly();
             theme.reviewsSlides();
             theme.brandsSlides();
             theme.fakeCount();
