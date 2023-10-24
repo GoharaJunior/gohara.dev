@@ -1019,29 +1019,8 @@
                 font-weight: 500;
                 font-size: 32px;
                 color: #fff;
-                margin-bottom: 10px;
-                text-align: center;
-            }
-
-            > span { 
-                display: block;
-                font-weight: bold;
-                font-size: 14px;
-                line-height: 18px;
-                letter-spacing: 0.2em;
-                color: #FFFFFF;
-                margin-bottom: 26px;
-            }
-
-            p {
-                font-size: 16px;
-                text-align: center;
-                line-height: 150%;
-                letter-spacing: 0.02em;
-                color: #FFFFFF;
                 margin-bottom: 30px;
-                width: 100%;
-                max-width: 310px;
+                text-align: center;
             }
         }
 
@@ -1069,11 +1048,11 @@
             .overlay {
                 opacity: 1;
                 visibility: visible;
-                height: 45%;
+                height: 50%;
                 bottom: 0;
                 border-radius: 0;
-                padding: 10px;
-                background: linear-gradient(306deg, #1C1E53 0%, rgba(28, 30, 83, 0.42) 100%);
+                padding: 20px;
+                background: linear-gradient(306deg, #161616 0%, rgba(28, 30, 83, 0.42) 100%);
 
                 h3 {
                     font-size: 24px;
