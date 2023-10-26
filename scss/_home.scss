@@ -83,7 +83,7 @@
 
         .left-area {
             width: 100%;
-            max-width: 482px;
+            max-width: 550px;
             margin-right: 30px;
 
             .btn-area {
@@ -313,7 +313,7 @@
                 }
 
                 h1 {
-                    font-size: 2.25rem;
+                    font-size: 34px;
                 }
 
                 > p {
@@ -380,7 +380,7 @@
         .left-area {
             position: relative;
             width: 100%;
-            max-width: 560px;
+            max-width: 492px;
             margin-right: 30px;
 
             img {          
@@ -490,13 +490,13 @@
                 img {
                     &:nth-of-type(1) {
                         top: 5%;
-                        left: 10%;
+                        left: 0;
                         max-width: 300px;
                     }
                     
                     &:nth-of-type(2) {
                         top: 0;
-                        right: 10%;
+                        right: 0;
                         max-width: 300px;
                     }
                 }
@@ -607,6 +607,11 @@
 
     img {
         max-width: 90px;
+    }
+
+    @media (max-width: 500.1px) {
+        margin-top: 70px;
+        margin-bottom: 0;
     }
 }
 
@@ -745,7 +750,7 @@
         }
 
         &-title {
-            margin-bottom: 30px;
+            margin-bottom: 50px;
             
             h2 {
                 font-size: 32px;
