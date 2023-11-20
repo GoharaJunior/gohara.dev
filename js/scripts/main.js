@@ -111,35 +111,41 @@
 
         brandsSlides: function() {
             var swiper = new Swiper('.slide-brands.swiper', {
-                loop: true,
-                slidesPerView: 3,
-                speed: 8000,
-                loopedSlidesLimit: false,
-                allowTouchMove: false,
+                direction: 'horizontal', 
+                centeredSlides: true,
+                loop: true, grabCursor: true,
+                centeredSlidesBounds: true,
+                slideToClickedSlide: true,
+                simulateTouch: false,
+                spaceBetween: 30,
                 autoplay: {
-                    delay: 1,
+                    enabled: true,
+                    delay: 0,
+                    pauseOnMouseEnter: true,
+                    disableOnInteraction: false,
                 },
-                // Configurações iniciais para dispositivos móveis
+                centerInsufficientSlides: true,
+                speed: 3000,
+                effect: 'slide',
+                loopAdditionalSlides: 0,
                 breakpoints: {
-                    // Quando a largura da tela for igual ou maior que 640px
-                    600: {
-                        slidesPerView: 3,
-                        spaceBetween: 30
-                    },
-                    // Quando a largura da tela for igual ou maior que 768px
-                    768: {
-                        slidesPerView: 5,
-                        spaceBetween: 40
+                    1100: {
+                        slidesPerView: 10
                     },
                     992: {
-                        slidesPerView: 7,
-                        spaceBetween: 40
+                        slidesPerView: 8
                     },
-                    1248: {
-                        slidesPerView: 10,
-                        spaceBetween: 40
+                    768: {
+                        slidesPerView: 6
+                    },
+                    
+                    576: {
+                        slidesPerView: 4
+                    },
+
+                    0: {
+                        slidesPerView: 3
                     }
-                    // E assim por diante para tamanhos de tela maiores
                 }
             });
         },
@@ -193,7 +199,45 @@
             }
             
             countViewer(10,30, '#count-viewer')
-        }
+        },
+
+        backToTop: function() {
+            var progressPath = document.querySelector('.btn-back-to-top path');
+            var pathLength = progressPath.getTotalLength();
+
+            progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+            progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+            progressPath.style.strokeDashoffset = pathLength;
+            progressPath.getBoundingClientRect();
+            progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+
+            var updateProgress = function () {
+                var scroll = $(window).scrollTop();
+                var height = $(document).height() - $(window).height();
+                var progress = pathLength - (scroll * pathLength / height);
+                progressPath.style.strokeDashoffset = progress;
+            }
+
+            updateProgress();
+            $(window).scroll(updateProgress);	
+            var offset = 50;
+            var duration = 550;
+
+            jQuery(window).on('scroll', function() {
+                if (jQuery(this).scrollTop() > offset) {
+                    jQuery('.btn-back-to-top').addClass('active-progress');
+                } else {
+                    jQuery('.btn-back-to-top').removeClass('active-progress');
+                }
+            });
+
+            jQuery('.btn-back-to-top').on('click', function(event) {        
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            })
+        },
     };
 
     // Execução de Funções após o carregamento do documento
@@ -214,6 +258,7 @@
             theme.reviewsSlides();
             theme.brandsSlides();
             theme.fakeCount();
+            theme.backToTop();
             theme.openAccordion();
         }
     });
