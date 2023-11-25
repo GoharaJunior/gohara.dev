@@ -1,17 +1,10 @@
-/*==================================================
- * Aqui vão todas as variáveis que serão utilizadas.
- * ================================================= */
+/* ==================================================
+*  #Aqui vão todas as variáveis que serão utilizadas.
+*  ================================================== */
 
- // Cores principais
-$brand-blue: #0073CE;
-$brand-light-blue: #00A5F0;
-$brand-green-light: #00D7D7;
-$brand-yellow: #FFC800;
-
-// Escalas de cinzas
-$gray-600: #33303E;
-$gray-500: #4E4B59;
-$gray-400: #5F5C6B;
-$gray-300: #7A7786;
-$gray-200: #C6C5CE;
-$gray-100: #F1F0F5;
+// Cases marquee config
+$size: clamp(10rem, 1rem + 40vmin, 30rem);
+$gap: calc($size / 14);
+$duration: 60s;
+$scroll-start: 0;
+$scroll-end: calc(-100% - $gap);

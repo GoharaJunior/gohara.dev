@@ -1,0 +1,254 @@
+// Buttons bg animation
+@keyframes textura {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: 100% 0
+    }
+}
+
+// Noise Effect
+.noise {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.15;
+    background-image: url('../img/ruido-animado.gif');
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 2024;
+}
+
+// Light animation
+@keyframes light {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+// Lines animation
+@keyframes drop {
+    0% {
+        top: -50%
+    }
+
+    100% {
+        top: 110%
+    }
+}
+
+// Icon s-hero rotation
+@keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(359deg)
+    }
+}
+
+// Icon Scroll
+@keyframes icon-scroll {
+    0%, 5% {
+        stroke-dashoffset: 20;
+    }
+    95%, 100% {
+        stroke-dashoffset: -20;
+    }
+}
+
+// S-about
+@keyframes floating {
+    0% {
+        transform: translateY(0)
+    }
+
+    66% {
+        transform: translateY(-15px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+// Footer - Background animation
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+// Popup de interesse
+@keyframes popup2 {
+    0% {
+        bottom: -100%
+    }
+
+    5% {
+        bottom: 4%;
+        opacity: 1
+    }
+
+    7% {
+        bottom: 4%;
+        opacity: 1
+    }
+
+    9% {
+        bottom: -100%
+    }
+
+    10% {
+        bottom: -100%
+    }
+
+    18% {
+        bottom: -100%
+    }
+
+    20% {
+        bottom: -100%
+    }
+
+    22% {
+        bottom: -100%
+    }
+
+    32% {
+        bottom: -100%
+    }
+
+    34% {
+        bottom: 4%;
+        opacity: 1
+    }
+
+    36% {
+        bottom: 4%;
+        opacity: 1
+    }
+
+    38% {
+        bottom: -100%
+    }
+
+    43% {
+        bottom: -100%
+    }
+
+    45% {
+        bottom: -100%
+    }
+
+    47% {
+        bottom: -100%
+    }
+
+    57% {
+        bottom: -100%
+    }
+
+    59% {
+        bottom: -100%
+    }
+
+    61% {
+        bottom: -100%
+    }
+
+    63% {
+        bottom: -100%
+    }
+
+    68% {
+        bottom: -100%
+    }
+
+    70% {
+        bottom: 4%;
+        opacity: 1
+    }
+
+    72% {
+        bottom: 4%;
+        opacity: 1
+    }
+
+    74% {
+        bottom: -100%
+    }
+
+    84% {
+        bottom: -100%
+    }
+
+    86% {
+        bottom: -100%
+    }
+
+    90% {
+        bottom: -100%
+    }
+
+    94% {
+        bottom: -100%
+    }
+
+    96% {
+        bottom: -100%
+    }
+
+    88% {
+        bottom: -100%
+    }
+
+    100% {
+        bottom: -100%
+    }
+}

@@ -74,12 +74,12 @@
             const logo = document.getElementById("logo");
     
             logo.addEventListener("click", (event) => {
-            event.preventDefault();
-    
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+                event.preventDefault();
+        
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
             });
         },
 
