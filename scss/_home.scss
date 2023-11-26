@@ -1012,7 +1012,6 @@
                 gap: $gap;
                 min-width: 100%;
                 animation: scroll-x $duration linear infinite;
-
                 @media (prefers-reduced-motion: reduce) {
                     animation-play-state: paused;
                 }
@@ -1025,6 +1024,20 @@
             transform: translateX($scroll-start);
         }to {
             transform: translateX($scroll-end);
+        }
+    }
+
+    @media (max-width: 500.1px) {
+        &-itens {
+            .marquee {
+                &__group {
+                    a {
+                        img {
+                            max-width: 280px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
